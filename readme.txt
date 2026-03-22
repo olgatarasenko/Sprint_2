@@ -1,0 +1,1 @@
+My training project for work with git
