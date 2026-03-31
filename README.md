@@ -15,3 +15,4 @@ git config --global user.name "Ваше имя"
 git config --global user.email "your@email.com"
 
 # Sprint_1
+# Sprint_1
