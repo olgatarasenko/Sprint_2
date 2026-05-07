@@ -1,21 +1,21 @@
 class EmployeeSalary:
     hourly_payment = 400
 
-    def __init__(self, name, hours=None, rest_days=None, email=None):
+    def __init__(self, name, hours = 0, rest_days = 0, email = ''):
         self.name = name
         self.hours = hours
         self.rest_days = rest_days
         self.email = email
 
     @classmethod
-    def get_hours(cls, name, hours=None, rest_days=0, email=None):
-        if hours is None:
+    def get_hours(cls, name, hours = 0, rest_days = 0, email = ''):
+        if hours == 0:
             hours = (7 - rest_days) * 8
         return cls(name, hours, rest_days, email)
 
     @classmethod
-    def get_email(cls, name, hours=None, rest_days=0, email=None):
-        if email is None:
+    def get_email(cls, name, hours = 0, rest_days = 0, email = ''):
+        if email == '':
             email = f"{name}@email.com"
         return cls(name, hours, rest_days, email)
 
